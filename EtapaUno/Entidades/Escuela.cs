@@ -1,0 +1,6 @@
+namespace CoreEscuela.Entidades
+{
+    
+
+
+}
