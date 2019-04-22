@@ -1,32 +1,16 @@
 ﻿using System;
 using CoreEscuela.Entidades;
 
-namespace EtapaUno
-{
-    class Program
-    {
-        static void Main(string[] args)
-        {
-            var escuela = new Escuela("Platzi Academy", 2012, TiposEscuela.Primaria, ciudad: "Bogotá");
+namespace EtapaUno {
+    class Program {
+        static void Main (string[] args) {
+            var escuela = new Escuela ("Platzi Academy", 2012, TiposEscuela.Primaria, ciudad: "Bogotá");
             //escuela.Pais ="Colombia";
             //escuela.Ciudad="Bogota";
-            var arregloCursos = new Curso[3];
-
-            arregloCursos[0] = new Curso()
-            {
-                Nombre = "101"
-            };
-
-            arregloCursos[1] = new Curso()
-            {
-                Nombre = "201"
-            };
-
-            arregloCursos[2] = new Curso()
-            {
-                Nombre = "301"
-            };
-
+            Curso [] arregloCursos =  {
+                new Curso () { Nombre = "101" },
+                new Curso () { Nombre = "201" };
+                new Curso () { Nombre = "301" };
 
 
             /* Sin Arreglos
@@ -38,43 +22,45 @@ namespace EtapaUno
                           Nombre ="301"
                         };
              */
-            Console.WriteLine(escuela);
-            System.Console.WriteLine("---------------");
-            ImprimirCursosWhile(arregloCursos);
-            System.Console.WriteLine("---------------");
-            ImprimirCursosDoWhile(arregloCursos);
-            System.Console.WriteLine("---------------");
-            ImprimirCursosFor(arregloCursos);
+            Console.WriteLine (escuela);
+            System.Console.WriteLine ("------While---------");
+            ImprimirCursosWhile (arregloCursos);
+            System.Console.WriteLine ("------DoWhile---------");
+            ImprimirCursosDoWhile (arregloCursos);
+            System.Console.WriteLine ("--------For----------");
+            ImprimirCursosFor (arregloCursos);
+            System.Console.WriteLine ("--------ForEach----------");
+            ImprimirCursosForEach (arregloCursos);
 
         }
-        private static void ImprimirCursosFor(Curso[] arregloCursos)
-        {
-            for (int i = 0; 1 < arregloCursos.Length; i++)
-            {
-                Console.WriteLine($"Nombre {arregloCursos[i].Nombre}, id {arregloCursos[i].UniqueId}");
+        private static void ImprimirCursosForEach (Curso[] arregloCursos) {
+            foreach (var curso in arregloCursos) {
+                Console.WriteLine ($"Nombre {curso.Nombre}, id {curso.UniqueId}");
             }
         }
-        private static void ImprimirCursosDoWhile(Curso[] arregloCursos)
-        {
+
+        private static void ImprimirCursosFor (Curso[] arregloCursos) {
+            for (int i = 0; i < arregloCursos.Length; i++) {
+                Console.WriteLine ($"Nombre {arregloCursos[i].Nombre}, id{arregloCursos[i].UniqueId}");
+            }
+        }
+
+        private static void ImprimirCursosDoWhile (Curso[] arregloCursos) {
             int contador = 0;
-            do
-            {
-                Console.WriteLine($"Nombre {arregloCursos[contador].Nombre}, id{arregloCursos[contador].UniqueId}");
+            do {
+                Console.WriteLine ($"Nombre {arregloCursos[contador].Nombre}, id{arregloCursos[contador].UniqueId}");
                 contador++;
             }
             while (contador < arregloCursos.Length);
         }
 
-        private static void ImprimirCursosWhile(Curso[] arregloCursos)
-        {
+        private static void ImprimirCursosWhile (Curso[] arregloCursos) {
             int contador = 0;
-            while (contador < arregloCursos.Length)
-            {
-                Console.WriteLine($"Nombre {arregloCursos[contador].Nombre}, id{arregloCursos[contador].UniqueId}");
+            while (contador < arregloCursos.Length) {
+                Console.WriteLine ($"Nombre {arregloCursos[contador].Nombre}, id{arregloCursos[contador].UniqueId}");
                 contador++;
             }
         }
-
 
         /*Impresion con arreglo pero con errores
         System.Console.WriteLine(arregloCursos[0].Nombre);
@@ -89,4 +75,3 @@ namespace EtapaUno
         */
     }
 }
-
