@@ -21,8 +21,6 @@ namespace EtapaUno {
                 new Curso () { Nombre = "301" }
             };
 
-            ImprimirCursosEscuela (escuela);
-
             /* Sin Arreglos
                         var curso2= new Curso(){
                         Nombre ="201"
@@ -41,6 +39,41 @@ namespace EtapaUno {
             ImprimirCursosFor (arregloCursos);
             WriteLine ("--------ForEach----------");
             ImprimirCursosForEach (arregloCursos);
+            ImprimirCursosEscuela (escuela);
+
+            bool rta = 10 == 10;
+            int cantidad = 10;
+
+            if (rta == false ) {
+                WriteLine ("Se cumple la condicion 1");
+            } else if (cantidad > 15) {
+                WriteLine ("Se cumple la condicion 2");
+            } else {
+                WriteLine ("No se cumplio la condicion");
+            }
+
+            // Y
+            if  (cantidad > 5  && rta == false)
+            {
+               WriteLine ("Se cumple la condicion 3"); 
+            }
+            //OR
+            if  (cantidad > 5  || rta)
+            {
+               WriteLine ("Se cumple la condicion 4"); 
+            }
+            // Not Equal
+             if  (cantidad > 5  != rta)
+            {
+               WriteLine ("Se cumple la condicion 5"); 
+            }
+
+            cantidad = 10;
+                // Comparaciones compuestas
+             if ((cantidad > 15  || !rta) && (cantidad % 5 == 0))
+            {
+               WriteLine ("Se cumple la condicion 6"); 
+            }
 
         }
 
@@ -98,5 +131,7 @@ namespace EtapaUno {
         WriteLine($"{curso2.Nombre}, {curso2.UniqueId}");
         System.WriteLine(curso3);
         */
+
     }
+
 }
