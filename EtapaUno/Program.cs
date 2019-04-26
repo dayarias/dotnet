@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using CoreEscuela.Entidades;
 using static System.Console;
 
@@ -9,71 +10,28 @@ namespace EtapaUno {
             //escuela.Pais ="Colombia";
             //escuela.Ciudad="Bogota";
 
-            Curso[] arregloCursos = {
-                new Curso () { Nombre = "101" },
-                new Curso () { Nombre = "201" },
-                new Curso () { Nombre = "301" },
+            //Collections   
+            escuela.Cursos = new List<Curso> () {
+                new Curso () { Nombre = "101", Jornada = TiposJornada.Mañana },
+                new Curso () { Nombre = "201", Jornada = TiposJornada.Mañana },
+                new Curso () { Nombre = "301", Jornada = TiposJornada.Mañana },
             };
 
-            escuela.Cursos = new Curso[] {
-                new Curso () { Nombre = "101" },
-                new Curso () { Nombre = "201" },
-                new Curso () { Nombre = "301" }
+            var otraColeccion= new List<Curso> () {
+                new Curso () { Nombre = "401", Jornada = TiposJornada.Mañana },
+                new Curso () { Nombre = "501", Jornada = TiposJornada.Mañana },
+                new Curso () { Nombre = "502", Jornada = TiposJornada.Tarde },
             };
 
-            /* Sin Arreglos
-                        var curso2= new Curso(){
-                        Nombre ="201"
-                        };
-
-                        var curso3= new Curso(){
-                          Nombre ="301"
-                        };
-             */
-            WriteLine (escuela);
-            WriteLine ("------While---------");
-            ImprimirCursosWhile (arregloCursos);
-            WriteLine ("------DoWhile---------");
-            ImprimirCursosDoWhile (arregloCursos);
-            WriteLine ("--------For----------");
-            ImprimirCursosFor (arregloCursos);
-            WriteLine ("--------ForEach----------");
-            ImprimirCursosForEach (arregloCursos);
+            escuela.Cursos.Add (new Curso () { Nombre = "102", Jornada = TiposJornada.Tarde });
+            escuela.Cursos.Add (new Curso () { Nombre = "202", Jornada = TiposJornada.Tarde });
+            //Agrega Rangos
+            //otraColeccion.Clear();  //Con esta se elimina todo lo que tenga la lista otracoleccion.
+            escuela.Cursos.AddRange(otraColeccion);
+            
+            //Elimina rangos
+            otraColeccion.Clear();
             ImprimirCursosEscuela (escuela);
-
-            bool rta = 10 == 10;
-            int cantidad = 10;
-
-            if (rta == false ) {
-                WriteLine ("Se cumple la condicion 1");
-            } else if (cantidad > 15) {
-                WriteLine ("Se cumple la condicion 2");
-            } else {
-                WriteLine ("No se cumplio la condicion");
-            }
-
-            // Y
-            if  (cantidad > 5  && rta == false)
-            {
-               WriteLine ("Se cumple la condicion 3"); 
-            }
-            //OR
-            if  (cantidad > 5  || rta)
-            {
-               WriteLine ("Se cumple la condicion 4"); 
-            }
-            // Not Equal
-             if  (cantidad > 5  != rta)
-            {
-               WriteLine ("Se cumple la condicion 5"); 
-            }
-
-            cantidad = 10;
-                // Comparaciones compuestas
-             if ((cantidad > 15  || !rta) && (cantidad % 5 == 0))
-            {
-               WriteLine ("Se cumple la condicion 6"); 
-            }
 
         }
 
