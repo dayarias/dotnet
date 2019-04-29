@@ -1,4 +1,4 @@
-namespace CoreEscuela.Entidades
+namespace ColegioConsole.Entidades
 {
     public enum TiposJornada
     {
