@@ -1,4 +1,5 @@
-﻿using System;
+﻿using System.Reflection.Metadata;
+using System;
 using System.Collections.Generic;
 using CoreEscuela.Entidades;
 using static System.Console;
@@ -28,11 +29,30 @@ namespace EtapaUno {
             //Agrega Rangos
             //otraColeccion.Clear();  //Con esta se elimina todo lo que tenga la lista otracoleccion.
             escuela.Cursos.AddRange(otraColeccion);
+
+            Curso tmp = (new Curso () { Nombre = "101-Vacacional", Jornada = TiposJornada.Noche });
             
-            //Elimina rangos
-            otraColeccion.Clear();
+            ImprimirCursosEscuela (escuela);
+           
+            //Elimina la coleccion completa
+            //otraColeccion.Clear();  
+
+            //Como borrar elementos teniendo el hashcode anterior en memoria
+            //escuela.Cursos.Add (tmp);
+            //WriteLine("Curso.hash" + tmp.GetHashCode());
+            //escuela.Cursos.Remove(tmp);
+
+            //Como borrar elementos sin tener el hashcode anterior
+            Predicate <Curso> miAlgoritmo = Predicado;
+            escuela.Cursos.RemoveAll(miAlgoritmo);
+        
             ImprimirCursosEscuela (escuela);
 
+        }
+
+        private static bool Predicado(Curso curobj)
+        {
+            return curobj.Nombre =="301";
         }
 
         private static void ImprimirCursosEscuela (Escuela escuela) {

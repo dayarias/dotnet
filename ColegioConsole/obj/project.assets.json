@@ -692,11 +692,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\cariasl\\Documents\\dotnet\\EtapaUno\\EtapaUno.csproj",
+      "projectUniqueName": "c:\\Users\\cariasl\\Documents\\dotnet\\ColegioConsole\\EtapaUno.csproj",
       "projectName": "EtapaUno",
-      "projectPath": "C:\\Users\\cariasl\\Documents\\dotnet\\EtapaUno\\EtapaUno.csproj",
+      "projectPath": "c:\\Users\\cariasl\\Documents\\dotnet\\ColegioConsole\\EtapaUno.csproj",
       "packagesPath": "C:\\Users\\cariasl\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\cariasl\\Documents\\dotnet\\EtapaUno\\obj\\",
+      "outputPath": "c:\\Users\\cariasl\\Documents\\dotnet\\ColegioConsole\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

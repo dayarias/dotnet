@@ -692,22 +692,24 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\cariasl\\Documents\\dotnet\\School\\School.csproj",
+      "projectUniqueName": "c:\\Users\\cariasl\\Documents\\dotnet\\School\\School.csproj",
       "projectName": "School",
-      "projectPath": "C:\\Users\\cariasl\\Documents\\dotnet\\School\\School.csproj",
+      "projectPath": "c:\\Users\\cariasl\\Documents\\dotnet\\School\\School.csproj",
       "packagesPath": "C:\\Users\\cariasl\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\cariasl\\Documents\\dotnet\\School\\obj\\",
+      "outputPath": "c:\\Users\\cariasl\\Documents\\dotnet\\School\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\cariasl\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\cariasl\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp2.2"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {

@@ -1,1 +1,3 @@
 RemoveALL ? Es lo mismo que una arroy function en javascript? al utilizar un filter ? Es llamado expresión lambda el arrow Function en C# ?
+
+el predicado es un boleando que siempre debe devolver algo.
