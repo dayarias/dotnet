@@ -1,6 +1,6 @@
-﻿using System.Reflection.Metadata;
-using System;
+﻿using System;
 using System.Collections.Generic;
+using System.Reflection.Metadata;
 using CoreEscuela.Entidades;
 using static System.Console;
 
@@ -18,7 +18,7 @@ namespace EtapaUno {
                 new Curso () { Nombre = "301", Jornada = TiposJornada.Mañana },
             };
 
-            var otraColeccion= new List<Curso> () {
+            var otraColeccion = new List<Curso> () {
                 new Curso () { Nombre = "401", Jornada = TiposJornada.Mañana },
                 new Curso () { Nombre = "501", Jornada = TiposJornada.Mañana },
                 new Curso () { Nombre = "502", Jornada = TiposJornada.Tarde },
@@ -28,31 +28,24 @@ namespace EtapaUno {
             escuela.Cursos.Add (new Curso () { Nombre = "202", Jornada = TiposJornada.Tarde });
             //Agrega Rangos
             //otraColeccion.Clear();  //Con esta se elimina todo lo que tenga la lista otracoleccion.
-            escuela.Cursos.AddRange(otraColeccion);
+            escuela.Cursos.AddRange (otraColeccion);
 
-            Curso tmp = (new Curso () { Nombre = "101-Vacacional", Jornada = TiposJornada.Noche });
-            
             ImprimirCursosEscuela (escuela);
-           
-            //Elimina la coleccion completa
-            //otraColeccion.Clear();  
 
-            //Como borrar elementos teniendo el hashcode anterior en memoria
-            //escuela.Cursos.Add (tmp);
-            //WriteLine("Curso.hash" + tmp.GetHashCode());
-            //escuela.Cursos.Remove(tmp);
+            Predicate<Curso> miAlgoritmo = Predicado;
 
-            //Como borrar elementos sin tener el hashcode anterior
-            Predicate <Curso> miAlgoritmo = Predicado;
-            escuela.Cursos.RemoveAll(miAlgoritmo);
-        
+            escuela.Cursos.RemoveAll (delegate (Curso cur) {
+                return cur.Nombre == "301";
+            });
+            //Expresiones Lambda
+            escuela.Cursos.RemoveAll ((cur)  => cur.Nombre == "102" || cur.Jornada == TiposJornada.Tarde);
+            
             ImprimirCursosEscuela (escuela);
 
         }
 
-        private static bool Predicado(Curso curobj)
-        {
-            return curobj.Nombre =="301";
+        private static bool Predicado (Curso curobj) {
+            return curobj.Nombre == "301";
         }
 
         private static void ImprimirCursosEscuela (Escuela escuela) {
