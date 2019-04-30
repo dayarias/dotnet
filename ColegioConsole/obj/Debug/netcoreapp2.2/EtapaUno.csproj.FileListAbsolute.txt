@@ -20,3 +20,14 @@ C:\Users\cariasl\Documents\dotnet\ColegioConsole\obj\Debug\netcoreapp2.2\EtapaUn
 C:\Users\cariasl\Documents\dotnet\ColegioConsole\obj\Debug\netcoreapp2.2\EtapaUno.AssemblyInfo.cs
 C:\Users\cariasl\Documents\dotnet\ColegioConsole\obj\Debug\netcoreapp2.2\EtapaUno.dll
 C:\Users\cariasl\Documents\dotnet\ColegioConsole\obj\Debug\netcoreapp2.2\EtapaUno.pdb
+C:\Users\DAYAR\Documents\GitHub\dotnet\ColegioConsole\bin\Debug\netcoreapp2.2\EtapaUno.deps.json
+C:\Users\DAYAR\Documents\GitHub\dotnet\ColegioConsole\bin\Debug\netcoreapp2.2\EtapaUno.runtimeconfig.json
+C:\Users\DAYAR\Documents\GitHub\dotnet\ColegioConsole\bin\Debug\netcoreapp2.2\EtapaUno.runtimeconfig.dev.json
+C:\Users\DAYAR\Documents\GitHub\dotnet\ColegioConsole\bin\Debug\netcoreapp2.2\EtapaUno.dll
+C:\Users\DAYAR\Documents\GitHub\dotnet\ColegioConsole\bin\Debug\netcoreapp2.2\EtapaUno.pdb
+C:\Users\DAYAR\Documents\GitHub\dotnet\ColegioConsole\obj\Debug\netcoreapp2.2\EtapaUno.csprojAssemblyReference.cache
+C:\Users\DAYAR\Documents\GitHub\dotnet\ColegioConsole\obj\Debug\netcoreapp2.2\EtapaUno.csproj.CoreCompileInputs.cache
+C:\Users\DAYAR\Documents\GitHub\dotnet\ColegioConsole\obj\Debug\netcoreapp2.2\EtapaUno.AssemblyInfoInputs.cache
+C:\Users\DAYAR\Documents\GitHub\dotnet\ColegioConsole\obj\Debug\netcoreapp2.2\EtapaUno.AssemblyInfo.cs
+C:\Users\DAYAR\Documents\GitHub\dotnet\ColegioConsole\obj\Debug\netcoreapp2.2\EtapaUno.dll
+C:\Users\DAYAR\Documents\GitHub\dotnet\ColegioConsole\obj\Debug\netcoreapp2.2\EtapaUno.pdb
